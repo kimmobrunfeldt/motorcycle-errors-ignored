@@ -1,0 +1,20 @@
+{
+  "name": "motorcycle-error",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "browserify": "browserify index.js -o bundle.js",
+    "start": "http-server ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@motorcycle/core": "^1.1.0",
+    "@motorcycle/dom": "^1.2.1",
+    "@motorcycle/http": "^2.2.0",
+    "bluebird": "^3.3.3",
+    "http-server": "^0.9.0",
+    "most": "^0.18.1"
+  }
+}
