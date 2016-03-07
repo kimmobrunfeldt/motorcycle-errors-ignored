@@ -36,4 +36,8 @@ function main(sources) {
 Cycle.run(main, {
   DOM: makeDOMDriver('.main-container'),
   HTTP: makeHTTPDriver()
+}, {
+  onError: err => {
+    throw err;
+  }
 });

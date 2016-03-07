@@ -5,16 +5,21 @@
   "main": "index.js",
   "scripts": {
     "browserify": "browserify index.js -o bundle.js",
-    "start": "http-server ."
+    "watchify": "watchify index.js -o bundle.js",
+    "start": "concurrently 'http-server .' 'npm run watchify'"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@motorcycle/core": "^1.1.0",
+    "@motorcycle/core": "motorcyclejs/core#feat/general-updating",
     "@motorcycle/dom": "^1.2.1",
     "@motorcycle/http": "^2.2.0",
     "bluebird": "^3.3.3",
     "http-server": "^0.9.0",
     "most": "^0.18.1"
+  },
+  "devDependencies": {
+    "browserify": "^13.0.0",
+    "watchify": "^3.7.0"
   }
 }
